@@ -14,7 +14,6 @@ export default {
 }
 </script>-->
 
-
 <template>
   <div>
     <div>
@@ -35,11 +34,11 @@ import ListTitle from "./components/ListTitle.vue";
 export default {
   name : "app",
   components: {
-    ListTitle
+    ListTitle,
   },
   data() {
     return {
-      title: 'My VueJS Todo List'
+      title: 'My VueJS Todo List',
     };
   },
   methods: {
