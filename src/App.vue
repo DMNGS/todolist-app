@@ -18,6 +18,7 @@ export default {
 <template>
   <div>
     <div>
+      <img alt="Vue logo" src="./assets/logo.png">
       <h2>{{ title }}</h2>
 
       <div class="footer">
