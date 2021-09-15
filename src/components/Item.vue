@@ -4,14 +4,14 @@ Author : DOMINGUES PEDROSA Samuel
 <template>
 <div>
     <input type="checkbox">
-    <label>{{name}}</label>
+    <label>{{itemName}}</label>
 </div>
 </template>
 
 <script>
 export default {
     name: "item",
-    props: ['name']
+    props: ['itemName']
 }
 </script>
 

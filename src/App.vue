@@ -22,6 +22,8 @@ export default {
 
       <div class="footer">
         <hr />
+        <add-item v-on:onEnter="changeTitle"></add-item>
+        <items :listItems="listItems"></items>
         <list-title v-on:onEnter="changeTitle"></list-title>
       </div>
     </div>
@@ -30,15 +32,20 @@ export default {
 
 <script>
 import ListTitle from "./components/ListTitle.vue";
+import AddItem from "./components/AddItem.vue";
+import Items from "./components/Items.vue";
 
 export default {
   name : "app",
   components: {
     ListTitle,
+    AddItem,
+    Items
   },
   data() {
     return {
       title: 'My VueJS Todo List',
+      listItems: ["Miiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiilk", "Tattoed chicken", "Whale greace", "lemons"]
     };
   },
   methods: {
