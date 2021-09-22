@@ -4,7 +4,7 @@ Author : DOMINGUES PEDROSA Samuel
 <template>
 <div>
     <li>
-        <item v-for="item in listItems" :key="item" :itemName="item"></item>
+        <item v-for="(item, index) in listItems" :key="item" :itemName="item" :index="index"></item>
     </li>
 </div>
 </template>
@@ -22,7 +22,13 @@ export default {
         return{
             itemName: "AHHHHHHHHH"
         }
-    }
+    },
+    methods: {
+        onEnter (event) {
+            this.$emit('onEnter', event.target.value);
+            //this.title = "";
+        }
+    },
 }
 </script>
 

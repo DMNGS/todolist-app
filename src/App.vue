@@ -22,7 +22,7 @@ export default {
 
       <div class="footer">
         <hr />
-        <add-item v-on:onEnter="changeTitle"></add-item>
+        <add-item v-on:onEnter="addItem"></add-item>
         <items :listItems="listItems"></items>
         <list-title v-on:onEnter="changeTitle"></list-title>
       </div>
@@ -45,12 +45,16 @@ export default {
   data() {
     return {
       title: 'My VueJS Todo List',
-      listItems: ["Miiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiilk", "Tattoed chicken", "Whale greace", "lemons"]
+      listItems: ["Miiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiilk", "Tattoed chicken", "Whale grease", "lemons"]
     };
   },
   methods: {
     changeTitle(text){
       this.title = text;
+    },
+    addItem(text){
+      this.listItems.push(text);
+      this.newItem = text;
     }
   }
 }
